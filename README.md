@@ -1,59 +1,91 @@
-# Car Price Prediction Using Machine Learning
+# Car-Price-Clustering-using-KMeans
 
-Car Price Prediction Using Machine Learning 🚗💸
+Car Price Clustering using KMeans 🚗💸
 
-This project aims to build a machine learning model that predicts the price of a car based on various features such as the car's brand, model, year of manufacture, transmission type, mileage, fuel type, tax, miles per gallon (MPG), and engine size.
+📌 Overview
+This project focuses on analyzing and understanding the pricing patterns of used cars by leveraging data-driven techniques. The goal is to uncover hidden insights from the dataset and group cars into meaningful clusters based on their price ranges. This can help in better decision-making for both buyers and sellers.
 
-📌 Technologies Used
-Python 🐍
+📂 Dataset
+The dataset contains various features about cars, such as:
 
-Jupyter Notebook 📒
+Brand and model
 
-Pandas & NumPy (for data manipulation)
+Year of manufacture
 
-Matplotlib & Seaborn (for data visualization)
+Price
 
-Scikit-learn (for machine learning models and preprocessing)
-
-📊 Dataset
-The dataset used in this project contains information on used cars in the UK. Each row represents a car listing with features such as:
-
-Model
-
-Year
+Fuel type
 
 Transmission
 
-Mileage
+Engine capacity
 
-Fuel Type
+Mileage and other attributes
 
-Tax
+It was collected from a real-world car marketplace and reflects the actual distribution of car prices in the market.
 
-MPG
+🔍 Exploratory Data Analysis (EDA)
+We start by exploring the dataset to understand its structure and identify any potential issues. This includes:
 
-Engine Size
+Checking for missing or null values
 
-Price (Target variable)
+Summarizing numerical features (e.g., average price, mileage)
 
-📈 Workflow
-Data Loading & Cleaning: Loaded the dataset, checked for null values, and handled categorical features using label encoding.
+Visualizing price distribution to detect skewness or outliers
 
-Exploratory Data Analysis: Used visualizations to understand relationships between features and the target variable.
+Examining the relationships between different features
 
-Feature Engineering: Encoded categorical features numerically and selected relevant features for modeling.
+The goal of this phase is to get a clear understanding of the data before applying any machine learning techniques.
 
-Model Training:
+🧹 Data Cleaning
+Data cleaning ensures the quality and reliability of the dataset. In this phase:
 
-Used a Random Forest Regressor.
+Outliers are detected and removed using statistical techniques such as the Interquartile Range (IQR)
 
-Split data into training and testing sets (80/20 split).
+Irrelevant or redundant columns are dropped
 
-Evaluated performance using R² score.
+Missing values are handled appropriately
 
-Evaluation:
+This step prepares the data for meaningful analysis.
 
-Model achieved R² score of around 96%, indicating high accuracy in predicting car prices.
+📊 Clustering Analysis
+Instead of predicting exact prices, we use unsupervised learning (specifically, KMeans Clustering) to group the cars into different price segments.
 
-✅ Outcome
-A robust car price prediction model capable of estimating the value of a car with a high degree of accuracy
+Each car is assigned to a cluster based on its features, allowing us to:
+
+Identify pricing tiers (e.g., budget, mid-range, premium)
+
+Understand market segmentation
+
+Visualize how prices are grouped within the dataset
+
+Clustering is especially useful when we want to analyze data without labeled outcomes.
+
+📈 Visual Insights
+We use various plots and graphs to visualize:
+
+The distribution of prices
+
+The number of cars in each cluster
+
+How price clusters vary across other features like year or fuel type
+
+These visualizations make it easier to interpret the model results and draw actionable conclusions.
+
+💡 Key Takeaways
+Car prices are not evenly distributed and contain significant outliers
+
+KMeans can effectively group cars into price categories
+
+Clustering provides insights into hidden patterns in the market
+
+🛠️ Tools & Technologies
+Python: Main programming language
+
+Pandas & NumPy: Data manipulation
+
+Matplotlib: Data visualization
+
+Scikit-learn: Machine learning (KMeans clustering)
+
+Jupyter Notebook: Development environment
